@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+:root {
+  font-family: "SF Pro Text", "SF Pro Display", "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+body.theme-dark {
+  background: #020617;
+  color: #e2e8f0;
+}
+
+body.theme-dark .bg-slate-100 {
+  background-color: #020617;
+}
+
+body.theme-dark .bg-white {
+  background-color: #0f172a;
+}
+
+body.theme-dark .bg-slate-900 {
+  background-color: #2563eb;
+}
+
+body.theme-dark .bg-slate-800 {
+  background-color: #1e293b;
+}
+
+body.theme-dark .bg-slate-700 {
+  background-color: #334155;
+}
+
+body.theme-dark .text-slate-900 {
+  color: #e2e8f0;
+}
+
+body.theme-dark .text-slate-800,
+body.theme-dark .text-slate-700,
+body.theme-dark .text-slate-600,
+body.theme-dark .text-slate-500,
+body.theme-dark .text-slate-400 {
+  color: #b8c5db;
+}
+
+body.theme-dark .text-slate-500,
+body.theme-dark .text-slate-400 {
+  color: #94a3b8;
+}
+
+body.theme-dark .ring-slate-200 {
+  --tw-ring-color: #334155;
+}
+
+body.theme-dark .border-slate-200 {
+  border-color: #334155;
+}
+
+body.theme-dark .placeholder\:text-slate-400::placeholder {
+  color: #64748b;
+}
+
+/* Force passing reveal sheet to stay visually stable in dark mode. */
+body.theme-dark .reveal-sheet {
+  background-color: #0b1120;
+  border-color: #334155;
+}
+
+body.theme-dark .reveal-card {
+  background-color: #172033;
+  border-color: #334155;
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+.animate-rise {
+  animation: riseIn 220ms ease-out;
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
